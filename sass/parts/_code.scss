@@ -1,19 +1,23 @@
-
 code {
   background-color: var(--bg-1);
   padding: 0.1em 0.2em;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 1px solid var(--border-color);
 }
 
 pre {
   /* Rounded border */
-  border-radius: 5px;
+  border-radius: 10px;
   border: 1px solid var(--border-color);
 
   line-height: 1.4;
   overflow-x: auto;
   padding: 1em;
+
+  font-family: var(--code-font);
+  background-color: var(--bg-code) !important;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
 }
 
 pre code {
@@ -26,26 +30,18 @@ pre code {
   border: 0;
 }
 
-pre {
-  font-family: var(--code-font);
-  position: relative;
-  -webkit-overflow-scrolling: touch;
-}
-
 pre code[class*="language-"] {
   -webkit-overflow-scrolling: touch;
 }
 
 pre code[class*="language-"]::before {
-  background: black;
-  border-radius: 0 0 0.25rem 0.25rem;
-  color: white;
+  color: var(--primary-color);
   font-size: 12px;
+  font-weight: bold;
   letter-spacing: 0.025rem;
-  padding: 0.1rem 0.5rem;
   position: absolute;
-  right: 0.1rem;
-  margin-top: 0.1rem;
+  right: 0.5rem;
+  margin-top: 0.3rem;
   text-align: right;
   text-transform: uppercase;
   top: 0;
@@ -54,60 +50,55 @@ pre code[class*="language-"]::before {
 pre code[class="language-javaScript"]::before,
 pre code[class="language-js"]::before {
   content: "js";
-  background: #f7df1e;
-  color: black;
+  color: #F1FA8C;
 }
 
 pre code[class*="language-yml"]::before,
 pre code[class*="language-yaml"]::before {
   content: "yaml";
-  background: #f71e6a;
-  color: white;
+  color: #FF79C6;
 }
 
 pre code[class*="language-shell"]::before,
 pre code[class*="language-bash"]::before,
 pre code[class*="language-sh"]::before {
   content: "shell";
-  background: green;
-  color: white;
+  color: #50FA7B;
 }
 
 pre code[class*="language-json"]::before {
   content: "json";
-  background: dodgerblue;
-  color: #000000;
+  color: #8BE9FD;
 }
 
 pre code[class*="language-python"]::before,
 pre code[class*="language-py"]::before {
   content: "py";
-  background: blue;
-  color: yellow;
+  color: #F1FA8C;
 }
 
 pre code[class*="language-css"]::before {
   content: "css";
-  background: cyan;
-  color: black;
+  color: #8BE9FD;
 }
 
 pre code[class*="language-go"]::before {
   content: "Go";
-  background: cyan;
-  color: royalblue;
+  color: #8BE9FD;
 }
 
 pre code[class*="language-md"]::before,
 pre code[class*="language-md"]::before {
   content: "Markdown";
-  background: royalblue;
-  color: whitesmoke;
+  color: #8BE9FD;
 }
 
 pre code[class*="language-rust"]::before,
 pre code[class*="language-rs"]::before {
   content: "rust";
-  background: #fff8f6;
-  color: #ff4647;
+  color: #FFB86C;
+}
+
+span {
+  text-decoration: none !important;
 }

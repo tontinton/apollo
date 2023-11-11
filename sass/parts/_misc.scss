@@ -34,12 +34,14 @@ hr {
 
 blockquote {
   border-left: 3px solid var(--border-color);
-  color: #737373;
+  color: var(--text-1);
   margin: 0;
   padding-left: 1em;
 }
 
 a {
+  border-radius: 3px;
+  padding: 1px;
   border-bottom: 3px solid var(--primary-color);
   color: inherit;
   text-decoration: none;

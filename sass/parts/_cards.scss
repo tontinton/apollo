@@ -20,6 +20,7 @@
 
 .card-title {
     margin-top: 0.7em;
+    font-family: var(--code-font);
 }
 
 .card-image {
@@ -35,6 +36,7 @@
 .card-description {
     margin-top: 0.5em;
     overflow: hidden;
+    font-family: var(--code-font);
 }
 
 @media all and (max-width:720px) {

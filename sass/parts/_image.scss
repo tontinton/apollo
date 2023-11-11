@@ -3,6 +3,17 @@ img {
   max-width: 100%;
 }
 
+.svg {
+  background-color: var(--bg-code);
+  padding: 0.1em 0.2em;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  padding: 0.5em;
+  max-width: calc(100% - 2em);
+  display: block;
+  margin: auto;
+}
+
 figure {
   box-sizing: border-box;
   display: inline-block;
