@@ -30,11 +30,11 @@ function toggleTheme() {
 function getSavedTheme() {
     let currentTheme = localStorage.getItem("theme-storage");
     if(!currentTheme) {
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        //     currentTheme = "light";
+        // } else {
             currentTheme = "dark";
-        } else {
-            currentTheme = "light";
-        }
+        // }
     }
 
     return currentTheme;
