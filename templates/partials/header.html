@@ -90,7 +90,7 @@
             {% set user = config.extra.analytics.goatcounter.user %}
             {% set host = config.extra.analytics.goatcounter.host | default(value="goatcounter.com") %}
 
-            <script data-goatcounter="https://{{ user }}.{{ host }}/count" async src="{{ get_url(path="js/count.js") }}"></script>
+            <script data-goatcounter="https://{{ user }}.{{ host }}/count" async src="/js/count.js"></script>
             <noscript>
                 {# EasyList blocks '.com/count?', so we have to use '.com//count' #}
                 <img src="https://{{ user }}.{{ host }}//count?p={{ current_path }}&t={{ page.title | default(value=config.title) }}">
@@ -115,27 +115,27 @@
     {% endif %}
 
     {# RSS #}
-    <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path="atom.xml", trailing_slash=false) }}">
+    <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="/atom.xml">
 
 
     {% set theme = config.extra.theme %}
     {% if theme == "dark" %}
-        <link rel="stylesheet" type="text/css" href={{ get_url(path="theme/dark.css") }} />
+        <link rel="stylesheet" type="text/css" href="/theme/dark.css"/>
     {% elif theme == "light" %}
-        <link rel="stylesheet" type="text/css" href={{ get_url(path="theme/light.css") }} />
+        <link rel="stylesheet" type="text/css" href="/theme/light.css"/>
     {% elif theme == "auto" %}
-        <link rel="stylesheet" type="text/css" href={{ get_url(path="theme/light.css") }} />
-        <link rel="stylesheet" type="text/css" href="{{ get_url(path='theme/dark.css') }}" media="(prefers-color-scheme: dark)" />
+        <link rel="stylesheet" type="text/css" href="/theme/light.css"/>
+        <link rel="stylesheet" type="text/css" href="/theme/dark.css" media="(prefers-color-scheme: dark)" />
     {% elif theme == "toggle" %}
-        <link rel="stylesheet" type="text/css" href={{ get_url(path="theme/light.css") }} />
-        <link id="darkModeStyle" rel="stylesheet" type="text/css" href="{{ get_url(path='theme/dark.css') }}" />
+        <link rel="stylesheet" type="text/css" href="/theme/light.css"/>
+        <link id="darkModeStyle" rel="stylesheet" type="text/css" href="/theme/dark.css" />
     {% endif %}
 
-    <link rel="stylesheet" type="text/css" media="screen" href={{ get_url(path="main.css") }} />
+    <link rel="stylesheet" type="text/css" media="screen" href="/main.css"/>
 
     {% if config.extra.stylesheets %}
         {% for stylesheet in config.extra.stylesheets %}
-            <link rel="stylesheet" href="{{ get_url(path=stylesheet) }}">
+            <link rel="stylesheet" href="/{{ stylesheet }}">
         {% endfor %}
     {% endif %}
 </head>
