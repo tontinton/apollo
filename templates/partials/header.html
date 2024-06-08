@@ -68,6 +68,12 @@
         <link rel="icon" type="image/png" href={{ config.extra.favicon }} />
     {% endif %}
 
+    {% if page.extra.preloads %}
+        {% for preload in page.extra.preloads %}
+            <link rel="preload" href="{{ preload }}" as="script" />
+        {% endfor %}
+    {% endif %}
+
     {# Analytics #}
     {% if config.extra.analytics.enabled %}
         {% if config.extra.analytics.umami.website_id %}
