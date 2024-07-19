@@ -261,3 +261,21 @@ input[type=range]:focus::-ms-fill-upper {
   margin: auto;
 }
 
+table {
+  border-spacing: 0;
+  border-collapse: separate;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+
+  margin: 0 0 20px 0;
+  background-color: var(--table-bg);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+}
+
+table th {
+  border: none;
+}
+
+table td {
+  border: none;
+}
